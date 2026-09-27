@@ -28,20 +28,21 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"]
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
-},
 
-plugins: [
-  new HtmlWebpackPlugin({
-    template: ".src/index.html",
-  }),
-],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+    }),
+  ],
 
-devServer: {
-  static: "./dist",
-  open: true,
-  hot: true,
-},
+  devServer: {
+    static: "./dist",
+    open: true,
+    hot: true,
+  },
+};
+
