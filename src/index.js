@@ -1,1 +1,4 @@
-console.log("Webpack esta ligado!!");
+
+// CSS
+import "./styles/global.css";
+
