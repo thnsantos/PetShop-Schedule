@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -7,9 +8,9 @@ module.exports = {
   entry: "./src/index.js",
 
   output: {
-      path: path.resolve(__dirname, "dist"),
-      filename: "bundle.js",
-      clean: true,
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+    clean: true,
   },
 
   devtool: "source-map",
@@ -31,10 +32,10 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|jpe?g|git|svg)$/i,
+        test: /\.(png|jpe?g|gif|svg)$/i,
         type: "asset/resource",
         generator: {
-          filname: "assets/[name][ext]",
+          filename: "assets/[name][ext]",
         },
       },
     ],
@@ -44,12 +45,22 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/index.html",
     }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "src/assets"),
+          to: "assets",
+        },
+      ],
+    }),
   ],
 
   devServer: {
     static: "./dist",
     open: true,
-    hot: true,
+    hot: false,
+    liveReload: true,
+    watchFiles: ["src/**/*"]
   },
 };
 
