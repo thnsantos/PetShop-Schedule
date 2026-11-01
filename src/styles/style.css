@@ -1,0 +1,49 @@
+.schedule {
+
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  
+  align-items: center;
+  width: calc(100% - 2rem);
+  max-width: 44rem;
+  margin-inline: auto;
+  padding-block: 1rem ;
+  
+}
+
+.schedule-period {
+  
+  display: flex;
+  justify-content: space-between;
+
+  padding: 1rem;
+  width: 100%;
+  background-color: var(--bg-tertiary);
+  border-radius: 0.5rem;
+  
+}
+
+.schedule > header {
+  /* o ">" significa "Filho direto" */
+  max-width: 44rem;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.schedule-date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+}
+
+.schedule-date input {
+  font: var(--content-primary);
+  background-color: var(--bg-official);
+  border: 1px solid var(--bd-primary);
+  border-radius: .5rem;
+}

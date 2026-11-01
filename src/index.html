@@ -16,14 +16,43 @@
 </head>
 
 <body>
+  
   <div class="logo flex">
-    <a href="#">
-      <img src="./assets/logo.png" alt="#"> 
+    <a href="#schedule">
+      <img src="./assets/logo.png" alt="Logo Mundo Pet"> 
     </a>
   </div>
 
-  
+  <main id="schedule" class="schedule">
+    <header>
+      <div class="schedule-heading">
+        <h1>Sua agenda</h1>
+        <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+      </div>
 
+      <div class="schedule-date">
+        <label for="schedule-date">Data</label>
+        <input id="schedule-date" type="date"> 
+      </div>
+    </header>
+
+    <section class="schedule-period">
+      <h2>Manhã</h2>
+      <p>09h-12h</p>
+    </section>
+
+    <section class="schedule-period">
+      <h2>Tarde</h2>
+      <p>13h-18h</p>
+    </section>
+
+    <section class="schedule-period">
+      <h2>Noite</h2>
+      <p>19h-21h</p>
+    </section>
+    
+    <button type="button">Novo Agendamento</button>
+  </main>
 </body>
 
 </html>

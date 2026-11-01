@@ -64,3 +64,8 @@ body {
 h1 {
   font: var(--tx-title);
 }
+
+p {
+  font: var(--tx-p-medium);
+  color: var(--content-secondary);
+}
