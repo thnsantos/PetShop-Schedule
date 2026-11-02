@@ -42,8 +42,48 @@
 }
 
 .schedule-date input {
-  font: var(--content-primary);
+
+  width: 170px;
+  height: 48px;
+
+  font: 400 16px/24px var(--font-inter);
+  color: var(--content-secondary);
   background-color: var(--bg-official);
   border: 1px solid var(--bd-primary);
   border-radius: .5rem;
+
+  background-image: url("../assets/Calendar-Minimalistic--Streamline-Solar.png");
+  background-repeat: no-repeat;
+  background-position: 0.75rem center;
+  background-size: 1.2rem;
+  padding-left: 2.25rem;
+}
+
+.schedule-date input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.date-picker {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  position: relative;
+}
+
+.date-picker::after {
+
+  content: "";
+  position: absolute;
+  right: 0.7rem;
+  top: 40%;
+  width: 0.9rem;
+  height: 0.9rem;
+  background-image: url("../assets/Vector.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  pointer-events: none;
+  
 }
