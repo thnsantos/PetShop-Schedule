@@ -6,3 +6,4 @@ import "./styles/nav.css";
 
 //JS
 import "./scripts/date.picker.js";
+import "./scripts/appointments.js";

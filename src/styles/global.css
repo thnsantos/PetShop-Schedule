@@ -69,3 +69,7 @@ p {
   font: var(--tx-p-medium);
   color: var(--content-secondary);
 }
+
+span {
+  font: var(--tx-p-small);
+}

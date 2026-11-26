@@ -1,6 +1,21 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/scripts/appointments.js"
+/*!*************************************!*\
+  !*** ./src/scripts/appointments.js ***!
+  \*************************************/
+() {
+
+var removeButtons = document.querySelectorAll(".remove-appointment");
+removeButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    button.closest("li").remove();
+  });
+});
+
+/***/ },
+
 /***/ "./src/scripts/date.picker.js"
 /*!************************************!*\
   !*** ./src/scripts/date.picker.js ***!
@@ -118,7 +133,11 @@ h1 {
 p {
   font: var(--tx-p-medium);
   color: var(--content-secondary);
-}`, "",{"version":3,"sources":["webpack://./src/styles/global.css"],"names":[],"mappings":"AAAA;;;EAGE,SAAS;EACT,UAAU;EACV,sBAAsB;AACxB;;AAEA;;EAEE,UAAU;EACV,0BAA0B;EAC1B,4BAA4B;EAC5B,2BAA2B;EAC3B,wBAAwB;;EAExB,gBAAgB;EAChB,sBAAsB;EACtB,qBAAqB;EACrB,uBAAuB;EACvB,sBAAsB;EACtB,mBAAmB;EACnB,wBAAwB;;EAExB,WAAW;EACX,qBAAqB;EACrB,uBAAuB;EACvB,mBAAmB;EACnB,qBAAqB;;EAErB,WAAW;EACX,kBAAkB;EAClB,wBAAwB;EACxB,oBAAoB;EACpB,0BAA0B;EAC1B,oBAAoB;EACpB,0BAA0B;;EAE1B,UAAU;EACV,iCAAiC;EACjC,2CAA2C;;EAE3C,gDAAgD;;EAEhD,8CAA8C;EAC9C,6CAA6C;EAC7C,8CAA8C;EAC9C,+CAA+C;EAC/C,8CAA8C;EAC9C,0CAA0C;;AAE5C;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,oCAAoC;EACpC,6BAA6B;EAC7B,wBAAwB;AAC1B;;AAEA;EACE,qBAAqB;AACvB;;AAEA;EACE,wBAAwB;EACxB,+BAA+B;AACjC","sourcesContent":["*,\r\n*::before,\r\n*::after {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\n:root {\r\n \r\n  /*CONTENT*/\r\n  --content-primary: #FFFFFF;\r\n  --content-secondary: #98959D;\r\n  --content-tertiary: #666666;\r\n  --content-brand: #9282FA;\r\n\r\n  /* BACKGROUND: */\r\n  --bg-official: #14151D;\r\n  --bg-primary: #151515;\r\n  --bg-secondary: #1E1E1E;\r\n  --bg-tertiary: #23242C;\r\n  --bg-brand: #9282FA;\r\n  --bg-highlights: #BDB4FA;\r\n\r\n  /* BORDER */\r\n  --bd-primary: #3E3C41;\r\n  --bd-secondary: #86818c;\r\n  --bd-brand: #9282FA;\r\n  --bd-divisor: #353339;\r\n\r\n  /* ACCENT */\r\n  --ac-blue: #027df0;\r\n  --ac-blue-light: #16487a;\r\n  --ac-yellow: #f0dc02;\r\n  --ac-yellow-light: #756e1b;\r\n  --ac-orange: #f09102;\r\n  --ac-orange-light: #75501b;\r\n\r\n  /* FONTS */\r\n  --font-inter: \"Inter\", sans-serif;\r\n  --font-interTight:\"Inter Tight\", sans-serif;\r\n\r\n  --tx-title: 600 24px/32px var(--font-interTight);\r\n  \r\n  --tx-p-medium: 600 14px/24px var(--font-inter); \r\n  --tx-p-small: 300 12px/16px var(--font-inter); \r\n  --tx-lb-large: 600 16px/24px var(--font-inter); \r\n  --tx-lb-medium: 600 14px/24px var(--font-inter); \r\n  --tx-lb-small: 600 12px/16px var(--font-inter); \r\n  --tx-link: 300 12px/16px var(--font-inter); \r\n\r\n}\r\n\r\n.flex {\r\n  display: flex;\r\n} \r\n\r\nbody {\r\n  background-color: var(--bg-official);\r\n  color: var(--content-primary);\r\n  font: var(--tx-p-medium);\r\n}\r\n\r\nh1 {\r\n  font: var(--tx-title);\r\n}\r\n\r\np {\r\n  font: var(--tx-p-medium);\r\n  color: var(--content-secondary);\r\n}"],"sourceRoot":""}]);
+}
+
+span {
+  font: var(--tx-p-small);
+}`, "",{"version":3,"sources":["webpack://./src/styles/global.css"],"names":[],"mappings":"AAAA;;;EAGE,SAAS;EACT,UAAU;EACV,sBAAsB;AACxB;;AAEA;;EAEE,UAAU;EACV,0BAA0B;EAC1B,4BAA4B;EAC5B,2BAA2B;EAC3B,wBAAwB;;EAExB,gBAAgB;EAChB,sBAAsB;EACtB,qBAAqB;EACrB,uBAAuB;EACvB,sBAAsB;EACtB,mBAAmB;EACnB,wBAAwB;;EAExB,WAAW;EACX,qBAAqB;EACrB,uBAAuB;EACvB,mBAAmB;EACnB,qBAAqB;;EAErB,WAAW;EACX,kBAAkB;EAClB,wBAAwB;EACxB,oBAAoB;EACpB,0BAA0B;EAC1B,oBAAoB;EACpB,0BAA0B;;EAE1B,UAAU;EACV,iCAAiC;EACjC,2CAA2C;;EAE3C,gDAAgD;;EAEhD,8CAA8C;EAC9C,6CAA6C;EAC7C,8CAA8C;EAC9C,+CAA+C;EAC/C,8CAA8C;EAC9C,0CAA0C;;AAE5C;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,oCAAoC;EACpC,6BAA6B;EAC7B,wBAAwB;AAC1B;;AAEA;EACE,qBAAqB;AACvB;;AAEA;EACE,wBAAwB;EACxB,+BAA+B;AACjC;;AAEA;EACE,uBAAuB;AACzB","sourcesContent":["*,\r\n*::before,\r\n*::after {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\n:root {\r\n \r\n  /*CONTENT*/\r\n  --content-primary: #FFFFFF;\r\n  --content-secondary: #98959D;\r\n  --content-tertiary: #666666;\r\n  --content-brand: #9282FA;\r\n\r\n  /* BACKGROUND: */\r\n  --bg-official: #14151D;\r\n  --bg-primary: #151515;\r\n  --bg-secondary: #1E1E1E;\r\n  --bg-tertiary: #23242C;\r\n  --bg-brand: #9282FA;\r\n  --bg-highlights: #BDB4FA;\r\n\r\n  /* BORDER */\r\n  --bd-primary: #3E3C41;\r\n  --bd-secondary: #86818c;\r\n  --bd-brand: #9282FA;\r\n  --bd-divisor: #353339;\r\n\r\n  /* ACCENT */\r\n  --ac-blue: #027df0;\r\n  --ac-blue-light: #16487a;\r\n  --ac-yellow: #f0dc02;\r\n  --ac-yellow-light: #756e1b;\r\n  --ac-orange: #f09102;\r\n  --ac-orange-light: #75501b;\r\n\r\n  /* FONTS */\r\n  --font-inter: \"Inter\", sans-serif;\r\n  --font-interTight:\"Inter Tight\", sans-serif;\r\n\r\n  --tx-title: 600 24px/32px var(--font-interTight);\r\n  \r\n  --tx-p-medium: 600 14px/24px var(--font-inter); \r\n  --tx-p-small: 300 12px/16px var(--font-inter); \r\n  --tx-lb-large: 600 16px/24px var(--font-inter); \r\n  --tx-lb-medium: 600 14px/24px var(--font-inter); \r\n  --tx-lb-small: 600 12px/16px var(--font-inter); \r\n  --tx-link: 300 12px/16px var(--font-inter); \r\n\r\n}\r\n\r\n.flex {\r\n  display: flex;\r\n} \r\n\r\nbody {\r\n  background-color: var(--bg-official);\r\n  color: var(--content-primary);\r\n  font: var(--tx-p-medium);\r\n}\r\n\r\nh1 {\r\n  font: var(--tx-title);\r\n}\r\n\r\np {\r\n  font: var(--tx-p-medium);\r\n  color: var(--content-secondary);\r\n}\r\n\r\nspan {\r\n  font: var(--tx-p-small);\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -207,13 +226,90 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.schedule {
 .schedule-period {
   
   display: flex;
+  flex-direction: column;
+  gap: 0;
   justify-content: space-between;
 
-  padding: 1rem;
+  padding: 1.25rem;
   width: 100%;
   background-color: var(--bg-tertiary);
   border-radius: 0.5rem;
   
+}
+
+.period-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: -1.25rem;
+  padding-inline: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--bd-divisor);
+}
+
+.period-heading h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.period-heading img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.appointments {
+  width: 100%;
+  list-style: none;
+}
+
+.appointments li {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1.3fr) minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.appointment-customer {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.appointment-customer strong {
+  color: var(--content-primary);
+  font: var(--tx-lb-small);
+}
+
+.appointment-customer span,
+.appointment-service {
+  color: var(--content-secondary);
+  font: var(--tx-p-small);
+}
+
+.appointments time {
+  color: var(--content-primary);
+  font: var(--tx-lb-small);
+}
+
+.remove-appointment {
+  border: 0;
+  background: transparent;
+  color: var(--content-secondary);
+  font: var(--tx-link);
+  cursor: pointer;
+  transition: color 150ms ease;
+}
+
+.remove-appointment:hover {
+  color: var(--content-primary);
+}
+
+.remove-appointment:focus-visible {
+  outline: 2px solid var(--bd-brand);
+  outline-offset: 3px;
 }
 
 .schedule > header {
@@ -319,7 +415,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.schedule {
 .schedule > button:focus-visible {
   outline: 5px solid var(--content-primary);
   outline-offset: 5px;
-}`, "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA;;EAEE,aAAa;EACb,sBAAsB;EACtB,UAAU;;EAEV,mBAAmB;EACnB,wBAAwB;EACxB,gBAAgB;EAChB,mBAAmB;EACnB,oBAAoB;;AAEtB;;AAEA;;EAEE,aAAa;EACb,8BAA8B;;EAE9B,aAAa;EACb,WAAW;EACX,oCAAoC;EACpC,qBAAqB;;AAEvB;;AAEA;EACE,mCAAmC;EACnC,gBAAgB;EAChB,WAAW;;EAEX,mBAAmB;EACnB,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,WAAW;;AAEb;;AAEA;;EAEE,YAAY;EACZ,YAAY;;EAEZ,qCAAqC;EACrC,+BAA+B;EAC/B,oCAAoC;EACpC,mCAAmC;EACnC,oBAAoB;;EAEpB,yDAA8E;EAC9E,4BAA4B;EAC5B,mCAAmC;EACnC,uBAAuB;EACvB,qBAAqB;AACvB;;AAEA;EACE,UAAU;EACV,eAAe;AACjB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,WAAW;;EAEX,kBAAkB;AACpB;;AAEA;;EAEE,WAAW;EACX,kBAAkB;EAClB,cAAc;EACd,QAAQ;EACR,aAAa;EACb,cAAc;EACd,yDAA6C;EAC7C,4BAA4B;EAC5B,2BAA2B;EAC3B,wBAAwB;EACxB,oBAAoB;;AAEtB;;AAEA;EACE,kBAAkB;EAClB,UAAU;EACV,WAAW;EACX,UAAU;EACV,YAAY;EACZ,gBAAgB;EAChB,sBAAsB;EACtB,mBAAmB;EACnB,SAAS;AACX;;AAEA;EACE,oBAAoB;EACpB,qBAAqB;EACrB,iCAAiC;EACjC,SAAS;EACT,qBAAqB;EACrB,qCAAqC;EACrC,eAAe;EACf,gBAAgB;;EAEhB,oDAAoD;AACtD;;AAEA;EACE,uBAAuB;EACvB,4DAA4D;AAC9D;;AAEA;EACE,uBAAuB;EACvB,4DAA4D;AAC9D;;AAEA;EACE,yCAAyC;EACzC,mBAAmB;AACrB","sourcesContent":[".schedule {\r\n\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: .5rem;\r\n  \r\n  align-items: center;\r\n  width: calc(100% - 2rem);\r\n  max-width: 44rem;\r\n  margin-inline: auto;\r\n  padding-block: 1rem ;\r\n  \r\n}\r\n\r\n.schedule-period {\r\n  \r\n  display: flex;\r\n  justify-content: space-between;\r\n\r\n  padding: 1rem;\r\n  width: 100%;\r\n  background-color: var(--bg-tertiary);\r\n  border-radius: 0.5rem;\r\n  \r\n}\r\n\r\n.schedule > header {\r\n  /* o \">\" significa \"Filho direto\" */\r\n  max-width: 44rem;\r\n  width: 100%;\r\n\r\n  padding-block: 15px;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n}\r\n\r\n.schedule-date {\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 0.5rem;\r\n\r\n}\r\n\r\n.schedule-date input {\r\n\r\n  width: 170px;\r\n  height: 48px;\r\n\r\n  font: 400 16px/24px var(--font-inter);\r\n  color: var(--content-secondary);\r\n  background-color: var(--bg-official);\r\n  border: 1px solid var(--bd-primary);\r\n  border-radius: .5rem;\r\n\r\n  background-image: url(\"../assets/Calendar-Minimalistic--Streamline-Solar.png\");\r\n  background-repeat: no-repeat;\r\n  background-position: 0.75rem center;\r\n  background-size: 1.2rem;\r\n  padding-left: 2.25rem;\r\n}\r\n\r\n.schedule-date input::-webkit-calendar-picker-indicator {\r\n  opacity: 0;\r\n  cursor: pointer;\r\n}\r\n\r\n.date-picker {\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 0.5rem;\r\n\r\n  position: relative;\r\n}\r\n\r\n.date-picker::after {\r\n\r\n  content: \"\";\r\n  position: absolute;\r\n  right: 0.92rem;\r\n  top: 40%;\r\n  width: 0.9rem;\r\n  height: 0.9rem;\r\n  background-image: url(\"../assets/Vector.png\");\r\n  background-repeat: no-repeat;\r\n  background-position: center;\r\n  background-size: contain;\r\n  pointer-events: none;\r\n  \r\n}\r\n\r\n.visually-hidden {\r\n  position: absolute;\r\n  width: 1px;\r\n  height: 1px;\r\n  padding: 0;\r\n  margin: -1px;\r\n  overflow: hidden;\r\n  clip: rect(0, 0, 0, 0);\r\n  white-space: nowrap;\r\n  border: 0;\r\n}\r\n\r\n.schedule > button {\r\n  align-self: flex-end;\r\n  padding: 0.75rem 1rem;\r\n  background-color: var(--bg-brand);\r\n  border: 0;\r\n  border-radius: 0.5rem;\r\n  font: 700 16px/24px var(--font-inter);\r\n  cursor: pointer;\r\n  margin-top: 10px;\r\n\r\n  transition: filter 150ms ease, box-shadow 150ms ease;\r\n}\r\n\r\n.schedule > button:hover {\r\n  filter: brightness(1.1);\r\n  box-shadow: 0 0 8px var(--bg-brand), 0 0 2px var(--bg-brand);\r\n}\r\n\r\n.schedule > button:active {\r\n  filter: brightness(1.1);\r\n  box-shadow: 0 0 8px var(--bg-brand), 0 0 2px var(--bg-brand);\r\n}\r\n\r\n.schedule > button:focus-visible {\r\n  outline: 5px solid var(--content-primary);\r\n  outline-offset: 5px;\r\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA;;EAEE,aAAa;EACb,sBAAsB;EACtB,UAAU;;EAEV,mBAAmB;EACnB,wBAAwB;EACxB,gBAAgB;EAChB,mBAAmB;EACnB,oBAAoB;;AAEtB;;AAEA;;EAEE,aAAa;EACb,sBAAsB;EACtB,MAAM;EACN,8BAA8B;;EAE9B,gBAAgB;EAChB,WAAW;EACX,oCAAoC;EACpC,qBAAqB;;AAEvB;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;EACnB,uBAAuB;EACvB,uBAAuB;EACvB,oBAAoB;EACpB,0CAA0C;AAC5C;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,WAAW;AACb;;AAEA;EACE,WAAW;EACX,YAAY;AACd;;AAEA;EACE,WAAW;EACX,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb,kEAAkE;EAClE,mBAAmB;EACnB,SAAS;EACT,iBAAiB;EACjB,oBAAoB;AACtB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,WAAW;AACb;;AAEA;EACE,6BAA6B;EAC7B,wBAAwB;AAC1B;;AAEA;;EAEE,+BAA+B;EAC/B,uBAAuB;AACzB;;AAEA;EACE,6BAA6B;EAC7B,wBAAwB;AAC1B;;AAEA;EACE,SAAS;EACT,uBAAuB;EACvB,+BAA+B;EAC/B,oBAAoB;EACpB,eAAe;EACf,4BAA4B;AAC9B;;AAEA;EACE,6BAA6B;AAC/B;;AAEA;EACE,kCAAkC;EAClC,mBAAmB;AACrB;;AAEA;EACE,mCAAmC;EACnC,gBAAgB;EAChB,WAAW;;EAEX,mBAAmB;EACnB,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,WAAW;;AAEb;;AAEA;;EAEE,YAAY;EACZ,YAAY;;EAEZ,qCAAqC;EACrC,+BAA+B;EAC/B,oCAAoC;EACpC,mCAAmC;EACnC,oBAAoB;;EAEpB,yDAA8E;EAC9E,4BAA4B;EAC5B,mCAAmC;EACnC,uBAAuB;EACvB,qBAAqB;AACvB;;AAEA;EACE,UAAU;EACV,eAAe;AACjB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,WAAW;;EAEX,kBAAkB;AACpB;;AAEA;;EAEE,WAAW;EACX,kBAAkB;EAClB,cAAc;EACd,QAAQ;EACR,aAAa;EACb,cAAc;EACd,yDAA6C;EAC7C,4BAA4B;EAC5B,2BAA2B;EAC3B,wBAAwB;EACxB,oBAAoB;;AAEtB;;AAEA;EACE,kBAAkB;EAClB,UAAU;EACV,WAAW;EACX,UAAU;EACV,YAAY;EACZ,gBAAgB;EAChB,sBAAsB;EACtB,mBAAmB;EACnB,SAAS;AACX;;AAEA;EACE,oBAAoB;EACpB,qBAAqB;EACrB,iCAAiC;EACjC,SAAS;EACT,qBAAqB;EACrB,qCAAqC;EACrC,eAAe;EACf,gBAAgB;;EAEhB,oDAAoD;AACtD;;AAEA;EACE,uBAAuB;EACvB,4DAA4D;AAC9D;;AAEA;EACE,uBAAuB;EACvB,4DAA4D;AAC9D;;AAEA;EACE,yCAAyC;EACzC,mBAAmB;AACrB","sourcesContent":[".schedule {\r\n\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: .5rem;\r\n  \r\n  align-items: center;\r\n  width: calc(100% - 2rem);\r\n  max-width: 44rem;\r\n  margin-inline: auto;\r\n  padding-block: 1rem ;\r\n  \r\n}\r\n\r\n.schedule-period {\r\n  \r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 0;\r\n  justify-content: space-between;\r\n\r\n  padding: 1.25rem;\r\n  width: 100%;\r\n  background-color: var(--bg-tertiary);\r\n  border-radius: 0.5rem;\r\n  \r\n}\r\n\r\n.period-heading {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  margin-inline: -1.25rem;\r\n  padding-inline: 1.25rem;\r\n  padding-bottom: 1rem;\r\n  border-bottom: 1px solid var(--bd-divisor);\r\n}\r\n\r\n.period-heading h2 {\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 0.5rem;\r\n}\r\n\r\n.period-heading img {\r\n  width: 1rem;\r\n  height: 1rem;\r\n}\r\n\r\n.appointments {\r\n  width: 100%;\r\n  list-style: none;\r\n}\r\n\r\n.appointments li {\r\n  display: grid;\r\n  grid-template-columns: 3.5rem minmax(0, 1.3fr) minmax(0, 1fr) auto;\r\n  align-items: center;\r\n  gap: 1rem;\r\n  padding-top: 2rem;\r\n  padding-bottom: 1rem;\r\n}\r\n\r\n.appointment-customer {\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 0.3rem;\r\n}\r\n\r\n.appointment-customer strong {\r\n  color: var(--content-primary);\r\n  font: var(--tx-lb-small);\r\n}\r\n\r\n.appointment-customer span,\r\n.appointment-service {\r\n  color: var(--content-secondary);\r\n  font: var(--tx-p-small);\r\n}\r\n\r\n.appointments time {\r\n  color: var(--content-primary);\r\n  font: var(--tx-lb-small);\r\n}\r\n\r\n.remove-appointment {\r\n  border: 0;\r\n  background: transparent;\r\n  color: var(--content-secondary);\r\n  font: var(--tx-link);\r\n  cursor: pointer;\r\n  transition: color 150ms ease;\r\n}\r\n\r\n.remove-appointment:hover {\r\n  color: var(--content-primary);\r\n}\r\n\r\n.remove-appointment:focus-visible {\r\n  outline: 2px solid var(--bd-brand);\r\n  outline-offset: 3px;\r\n}\r\n\r\n.schedule > header {\r\n  /* o \">\" significa \"Filho direto\" */\r\n  max-width: 44rem;\r\n  width: 100%;\r\n\r\n  padding-block: 15px;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n}\r\n\r\n.schedule-date {\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 0.5rem;\r\n\r\n}\r\n\r\n.schedule-date input {\r\n\r\n  width: 170px;\r\n  height: 48px;\r\n\r\n  font: 400 16px/24px var(--font-inter);\r\n  color: var(--content-secondary);\r\n  background-color: var(--bg-official);\r\n  border: 1px solid var(--bd-primary);\r\n  border-radius: .5rem;\r\n\r\n  background-image: url(\"../assets/Calendar-Minimalistic--Streamline-Solar.png\");\r\n  background-repeat: no-repeat;\r\n  background-position: 0.75rem center;\r\n  background-size: 1.2rem;\r\n  padding-left: 2.25rem;\r\n}\r\n\r\n.schedule-date input::-webkit-calendar-picker-indicator {\r\n  opacity: 0;\r\n  cursor: pointer;\r\n}\r\n\r\n.date-picker {\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 0.5rem;\r\n\r\n  position: relative;\r\n}\r\n\r\n.date-picker::after {\r\n\r\n  content: \"\";\r\n  position: absolute;\r\n  right: 0.92rem;\r\n  top: 40%;\r\n  width: 0.9rem;\r\n  height: 0.9rem;\r\n  background-image: url(\"../assets/Vector.png\");\r\n  background-repeat: no-repeat;\r\n  background-position: center;\r\n  background-size: contain;\r\n  pointer-events: none;\r\n  \r\n}\r\n\r\n.visually-hidden {\r\n  position: absolute;\r\n  width: 1px;\r\n  height: 1px;\r\n  padding: 0;\r\n  margin: -1px;\r\n  overflow: hidden;\r\n  clip: rect(0, 0, 0, 0);\r\n  white-space: nowrap;\r\n  border: 0;\r\n}\r\n\r\n.schedule > button {\r\n  align-self: flex-end;\r\n  padding: 0.75rem 1rem;\r\n  background-color: var(--bg-brand);\r\n  border: 0;\r\n  border-radius: 0.5rem;\r\n  font: 700 16px/24px var(--font-inter);\r\n  cursor: pointer;\r\n  margin-top: 10px;\r\n\r\n  transition: filter 150ms ease, box-shadow 150ms ease;\r\n}\r\n\r\n.schedule > button:hover {\r\n  filter: brightness(1.1);\r\n  box-shadow: 0 0 8px var(--bg-brand), 0 0 2px var(--bg-brand);\r\n}\r\n\r\n.schedule > button:active {\r\n  filter: brightness(1.1);\r\n  box-shadow: 0 0 8px var(--bg-brand), 0 0 2px var(--bg-brand);\r\n}\r\n\r\n.schedule > button:focus-visible {\r\n  outline: 5px solid var(--content-primary);\r\n  outline-offset: 5px;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1071,12 +1167,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_nav_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/nav.css */ "./src/styles/nav.css");
 /* harmony import */ var _scripts_date_picker_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scripts/date.picker.js */ "./src/scripts/date.picker.js");
 /* harmony import */ var _scripts_date_picker_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_scripts_date_picker_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _scripts_appointments_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scripts/appointments.js */ "./src/scripts/appointments.js");
+/* harmony import */ var _scripts_appointments_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_scripts_appointments_js__WEBPACK_IMPORTED_MODULE_4__);
 // CSS
 
 
 
 
 //JS
+
 
 })();
 
